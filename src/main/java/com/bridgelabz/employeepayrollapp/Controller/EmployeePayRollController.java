@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 
 @RestController
-@RequestMapping("/employeePayrollservice")
+@RequestMapping("/employeePayservice")
 /**
  * Controller : EmployeePayRollController
  * @author praja
