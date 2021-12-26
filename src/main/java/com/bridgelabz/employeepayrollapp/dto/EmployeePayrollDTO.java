@@ -1,12 +1,14 @@
 package com.bridgelabz.employeepayrollapp.dto;
 
+import javax.validation.constraints.Pattern;
+
 /**
  * EmployeePayrollDTO : Details of emloyees
  * @author praja
  *
  */
 public class EmployeePayrollDTO {
-	
+	@Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\$]{2,}$",message = "Employee name Invalid")
 	public String name;
 	public long salary;
 	
