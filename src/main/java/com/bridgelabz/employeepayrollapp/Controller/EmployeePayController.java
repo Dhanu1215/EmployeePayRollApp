@@ -56,6 +56,18 @@ public class EmployeePayController {
 	}
 
 	/**
+	 * Call get method to get details by department
+	 * @param department : Department of employee
+	 * @return : Details of employees by department
+	 */
+	@GetMapping("/department/{department}")
+	public ResponseEntity<ResponseDTO>getEmployeePayrollData(@PathVariable("department") String department){
+		List<EmployeePayrollData> empDataList = null;
+		empDataList = employeePayrollService.getEmployeesByDepartment(department);
+		ResponseDTO respDTO = new ResponseDTO("Get call for ID Successful:", empDataList);
+		return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
+	}
+	/**
 	 * Call post method
 	 * @param empPayrollDTO : name, salary
 	 * @return : Employee details with id
